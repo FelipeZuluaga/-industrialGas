@@ -1,0 +1,14 @@
+:root {
+  --blue-dark: #001b3d;      /* El fondo azul oscuro de la tarjeta */
+  --blue-bright: #0072bc;    /* El azul más claro del logo */
+  --orange-gas: #f15a24;     /* El naranja de "Industrial" y la llama */
+  --gold-text: #bca364;      /* El dorado de "Especialistas en..." */
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* O la que prefieras */
+  background-color: var(--blue-dark);
+  color: var(--white);
+}
