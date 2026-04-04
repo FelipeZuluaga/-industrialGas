@@ -1,0 +1,145 @@
+.contact-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 20px 20px 20px;
+  position: relative;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+/* Lado Izquierdo */
+.contact-info-side {
+  flex: 1;
+}
+
+.contact-info-side h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contact-info-side p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.method-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-box {
+  background-color: #0056b3;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lado Derecho */
+.contact-cta-side {
+  flex: 1;
+  text-align: right;
+}
+
+.contact-cta-side h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.blue-text {
+  color: #00aaff;
+}
+
+.availability {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.dot {
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+/* Legales y Disclaimer */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Botón Flotante de Chat */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.whatsapp-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.online-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #44ff44;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -12px;
+  left: -5px;
+  border: 2px solid #1a1a1a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .contact-cta-side {
+    text-align: center;
+  }
+  .contact-cta-side h2 {
+    font-size: 1.8rem;
+  }
+}

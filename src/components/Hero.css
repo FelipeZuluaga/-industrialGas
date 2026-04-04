@@ -1,0 +1,110 @@
+.hero-container {
+  background-color: #001a35; /* El azul oscuro de tu marca */
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  flex-wrap: wrap; /* Para que en móviles se ponga uno abajo del otro */
+}
+
+/* Lado del Texto */
+.hero-text-side {
+  flex: 1;
+  padding: 40px;
+  min-width: 350px;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.hero-title .highlight {
+  color: #d4af37; /* Color dorado/amarillo para resaltar */
+}
+
+.hero-subtitle {
+  color: #ffffff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.hero-description {
+  color: #f1c40f;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* Botones y Badges */
+.hero-badge {
+  border: 2px solid #e67e22;
+  color: #e67e22;
+  padding: 8px 25px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: white;
+}
+
+.cta-button {
+  background-color: #f37021; /* Naranja corporativo */
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+/* Lado de la Imagen */
+.hero-image-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  object-fit: contain;
+  /* Esto quita cualquier borde blanco si la imagen lo tiene */
+  display: block; 
+}
+
+/* Responsive para celulares */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+}
