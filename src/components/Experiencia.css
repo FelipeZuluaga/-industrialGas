@@ -1,0 +1,129 @@
+.seccion-experiencia {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contenedor-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Lado de la Imagen */
+.columna-imagen {
+  flex: 1;
+  position: relative;
+  min-width: 400px;
+  height: 500px; /* Ajusta según el tamaño de tu imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-principal {
+  width: 80%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Cuadros azules superpuestos */
+.cuadro-info {
+  position: absolute;
+  background-color: #1e90ff; /* Azul brillante como la imagen */
+  color: white;
+  padding: 25px;
+  width: 250px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.cuadro-info h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.cuadro-info p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.superior {
+  top: 10%;
+  left: 0;
+}
+
+.inferior {
+  bottom: 10%;
+  left: 0;
+}
+
+/* Lado de los Beneficios */
+.columna-beneficios {
+  flex: 1;
+  background-color: #1e90ff;
+  color: white;
+  padding: 50px;
+  border-radius: 4px;
+  min-width: 350px;
+}
+
+.columna-beneficios h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.lista-checks {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.lista-checks li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.check {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.boton-servicio {
+  background-color: #6c757d; /* Gris del botón */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.boton-servicio:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .columna-imagen {
+    height: auto;
+    min-width: 100%;
+    margin-bottom: 50px;
+  }
+  .imagen-principal {
+    width: 100%;
+    margin-left: 50px; /* Espacio para los cuadros */
+  }
+  .cuadro-info {
+    width: 200px;
+    padding: 15px;
+  }
+}

@@ -1,8 +1,9 @@
 .contact-footer {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  padding: 60px 20px 20px 20px;
+  background-color: var(--blue-dark); /* Fondo profundo oficial */
+  color: var(--white);
+  padding: 80px 20px 40px 20px;
   position: relative;
+  border-top: 4px solid var(--blue-bright); /* Detalle superior vibrante */
 }
 
 .contact-container {
@@ -12,134 +13,116 @@
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
-/* Lado Izquierdo */
-.contact-info-side {
-  flex: 1;
-}
-
-.contact-info-side h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: bold;
+.gold-title {
+  color: var(--gold-text); /* Dorado para el título */
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 .contact-info-side p {
+  color: var(--gray-light);
   font-size: 0.95rem;
-  color: #ccc;
-  line-height: 1.6;
-  margin-bottom: 25px;
-}
-
-.contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.method-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  max-width: 500px;
 }
 
 .icon-box {
-  background-color: #0056b3;
+  background-color: var(--blue-bright); /* Iconos en azul vibrante */
+  color: var(--white);
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-/* Lado Derecho */
-.contact-cta-side {
-  flex: 1;
-  text-align: right;
 }
 
 .contact-cta-side h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
   margin: 0;
-  line-height: 1.1;
 }
 
 .blue-text {
-  color: #00aaff;
+  color: var(--blue-bright); /* "TU VISITA TÉCNICA" resalta en azul claro */
 }
 
 .availability {
-  font-size: 1.3rem;
+  color: var(--orange-gas); /* El aviso de disponibilidad en naranja para urgencia */
   font-weight: bold;
-  margin-top: 15px;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-top: 20px;
 }
 
-.dot {
-  color: #ffffff;
-  margin-right: 5px;
+/* Botón Flotante de WhatsApp con el Naranja del Logo */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--orange-gas); /* Cambiado a naranja para que resalte más */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  z-index: 1000;
+  transition: transform 0.3s ease;
 }
 
-/* Legales y Disclaimer */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
 .footer-bottom {
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 30px;
+  text-align: center;
 }
 
 .footer-bottom p {
   font-size: 0.75rem;
-  color: #666;
-  text-align: left;
-  line-height: 1.4;
+  color: #888;
 }
 
-/* Botón Flotante de Chat */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  z-index: 1000;
-}
-
-.whatsapp-content {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-
-.online-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #44ff44;
-  border-radius: 50%;
-  position: absolute;
-  bottom: -12px;
-  left: -5px;
-  border: 2px solid #1a1a1a;
-}
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
     text-align: center;
   }
-  .contact-cta-side {
-    text-align: center;
+  .contact-info-side p {
+    margin: 0 auto 30px auto;
   }
-  .contact-cta-side h2 {
-    font-size: 1.8rem;
+}
+/* Contact.css */
+
+/* ... (resto de tus estilos de Contact.css) */
+
+.availability {
+  color: var(--orange-gas); /* El naranja para urgencia */
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  display: flex; /* Para alinear el icono y el texto */
+  align-items: center;
+  justify-content: flex-end; /* Alineado a la derecha como el resto del bloque CTA */
+  gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.whatsapp-icon-small {
+  color: var(--orange-gas); /* El icono también en naranja */
+  transition: transform 0.3s ease;
+}
+
+.availability:hover .whatsapp-icon-small {
+  transform: scale(1.1); /* Un pequeño efecto visual al pasar el mouse */
+}
+
+/* ... (resto de tus estilos, incluyendo el Responsive) */
+
+@media (max-width: 768px) {
+  /* ... */
+  .availability {
+    justify-content: center; /* Centrado en móviles */
+    margin-top: 25px;
   }
 }
