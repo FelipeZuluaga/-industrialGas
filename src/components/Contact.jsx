@@ -1,15 +1,17 @@
 import React from 'react';
 import './Contact.css';
-import { Phone, Smartphone, MessageCircle } from 'lucide-react'; // Opcional
+import { Phone, Smartphone } from 'lucide-react'; // Mantenemos los otros iconos de Lucide
+// Importamos el icono oficial de WhatsApp de react-icons
+import { IoLogoWhatsapp } from 'react-icons/io5'; 
 
 const Contact = () => {
   return (
-    <footer className="contact-footer">
+    <footer className="contact-footer" id="contacto">
       <div className="contact-container">
         
-        {/* Columna Izquierda: Info de Cobertura */}
+        {/* Columna Izquierda: Info de Cobertura (Sin cambios) */}
         <div className="contact-info-side">
-          <h3>Contáctanos</h3>
+          <h3 className="gold-title">Contáctanos</h3>
           <p>
             Brindamos soluciones efectivas y soporte técnico especializado en Bogotá y 
             municipios de Cundinamarca como Mosquera, Funza, Madrid, Zipaquirá, 
@@ -20,26 +22,29 @@ const Contact = () => {
           <div className="contact-methods">
             <div className="method-item">
               <div className="icon-box"><Phone size={20} /></div>
-              <span>PBX (Bogotá): 601 9395380</span>
+              <span>PBX (Bogotá): <strong>601 9395380</strong></span>
             </div>
             <div className="method-item">
               <div className="icon-box"><Smartphone size={20} /></div>
-              <span>Móvil: 3008501205</span>
+              <span>Móvil: <strong>300 850 1205</strong></span>
             </div>
           </div>
         </div>
 
-        {/* Columna Derecha: Call to Action Grande */}
+        {/* Columna Derecha: Call to Action */}
         <div className="contact-cta-side">
           <h2>LLÁMANOS Y PROGRAMA</h2>
           <h2 className="blue-text">TU VISITA TÉCNICA AL INSTANTE</h2>
+          
+          {/* Aviso de disponibilidad con el icono OFICIAL de WhatsApp */}
           <p className="availability">
-            <span className="dot">•</span> DISPONIBILIDAD PARA HOY MISMO
+            <IoLogoWhatsapp className="whatsapp-icon-official" size={26} /> 
+            <span>DISPONIBILIDAD PARA HOY MISMO</span>
           </p>
         </div>
       </div>
 
-      {/* Barra Inferior de Legales */}
+      {/* Barra Inferior de Legales (Sin cambios) */}
       <div className="footer-bottom">
         <p>
           Respetamos y protegemos tu privacidad... Somos un servicio técnico independiente. 
@@ -47,11 +52,11 @@ const Contact = () => {
         </p>
       </div>
 
-      {/* Botón Flotante de WhatsApp (El azul de la esquina) */}
+      {/* Botón Flotante de WhatsApp (El de la esquina inferior) */}
       <a href="https://wa.me/573008501205" className="whatsapp-float" target="_blank" rel="noreferrer">
         <div className="whatsapp-content">
-          <span>Chat</span>
-          <MessageCircle color="white" />
+          {/* Actualizamos también el icono aquí para que sea el oficial */}
+          <IoLogoWhatsapp size={22} color="white" />
           <div className="online-dot"></div>
         </div>
       </a>

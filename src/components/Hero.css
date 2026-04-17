@@ -1,110 +1,181 @@
+/* Contenedor principal que define la altura */
 .hero-container {
-  background-color: #001a35; /* El azul oscuro de tu marca */
-  min-height: 80vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+    position: relative;
+    height: 90vh; /* Altura casi completa de pantalla */
+    min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
 }
 
-.hero-wrapper {
-  display: flex;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  align-items: center;
-  flex-wrap: wrap; /* Para que en móviles se ponga uno abajo del otro */
+/* --- ESTILOS DEL SWIPER (FONDO) --- */
+.hero-swiper-background {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Fondo por debajo */
 }
 
-/* Lado del Texto */
-.hero-text-side {
-  flex: 1;
-  padding: 40px;
-  min-width: 350px;
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* La imagen real está aquí, con cover */
+.slide-image-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Capa oscura superpuesta a CADA imagen para legibilidad del texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad según necesites */
+    z-index: 2; /* Por encima de la imagen, por debajo del contenido */
+}
+
+/* Personalización de los puntos de paginación de Swiper */
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+    background: #2196f3 !important; /* Color principal de tu marca */
+    opacity: 1;
+}
+/* ----------------------------------- */
+
+
+/* --- ESTILOS DEL CONTENIDO FIJO --- */
+.hero-content {
+    position: relative;
+    z-index: 3; /* Por encima del carrusel y el overlay */
+    text-align: center;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.hero-top-label {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-weight: 400;
 }
 
 .hero-title {
-  color: #ffffff;
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 15px;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
 }
 
-.hero-title .highlight {
-  color: #d4af37; /* Color dorado/amarillo para resaltar */
-}
-
-.hero-subtitle {
-  color: #ffffff;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-  opacity: 0.9;
+.highlight {
+    color: #ffffff; /* Puedes usar un color de tu marca aquí si quieres, como un amarillo suave */
 }
 
 .hero-description {
-  color: #f1c40f;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 40px;
-  max-width: 500px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    font-weight: 300;
 }
 
-/* Botones y Badges */
-.hero-badge {
-  border: 2px solid #e67e22;
-  color: #e67e22;
-  padding: 8px 25px;
-  border-radius: 50px;
-  display: inline-block;
-  font-weight: bold;
-  margin-bottom: 15px;
-  background: white;
+/* Contenedor de botones */
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 35px;
 }
 
-.cta-button {
-  background-color: #f37021; /* Naranja corporativo */
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  display: block;
-  transition: transform 0.2s;
+/* Estilos de botones (Azules) */
+.btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Espacio para el icono */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none; /* Importante porque ahora son enlaces <a> */
+    transition: all 0.3s ease;
+    color: white;
 }
 
-.cta-button:hover {
-  transform: scale(1.05);
+/* Botón WhatsApp */
+.btn-primary {
+    background-color: #1e88e5; /* Azul principal */
 }
 
-/* Lado de la Imagen */
-.hero-image-side {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Botón Llamar */
+.btn-secondary {
+    background-color: #2196f3; /* Azul secundario un poco más claro */
 }
 
-.hero-main-img {
-  width: 100%;
-  height: auto;
-  max-width: 700px;
-  object-fit: contain;
-  /* Esto quita cualquier borde blanco si la imagen lo tiene */
-  display: block; 
+.btn-primary:hover, .btn-secondary:hover {
+    background-color: #1565c0; /* Azul oscuro al pasar el ratón */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Responsive para celulares */
+.hero-emergency-tag {
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+}
+/* --------------------------------- */
+
+
+/* AJUSTES PARA MÓVILES */
 @media (max-width: 768px) {
-  .hero-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .hero-title {
-    font-size: 2.2rem;
-  }
+    .hero-container {
+        height: auto;
+        min-height: 100vh; /* Ocupa toda la pantalla en móvil */
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
 }

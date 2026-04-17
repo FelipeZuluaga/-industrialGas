@@ -1,14 +1,38 @@
 :root {
-  --blue-dark: #001b3d;      /* El fondo azul oscuro de la tarjeta */
-  --blue-bright: #0072bc;    /* El azul más claro del logo */
-  --orange-gas: #f15a24;     /* El naranja de "Industrial" y la llama */
-  --gold-text: #bca364;      /* El dorado de "Especialistas en..." */
+  --blue-dark: #001b3d;      /* Fondo profundo del Nav Bar */
+  --blue-bright: #00AEEF;    /* Azul vibrante del logo */
+  --orange-gas: #f15a24;     /* Naranja de la llama y botones */
+  --gold-text: #bca364;      /* Dorado para subtítulos */
   --white: #ffffff;
+  --gray-bg: #d1d5db;        /* Gris para secciones secundarias */
 }
 
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif; /* O la que prefieras */
   background-color: var(--blue-dark);
   color: var(--white);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.seccion-experiencia {
+  background-color: var(--blue-dark);
+  padding: 80px 20px;
+}
+
+.cuadro-info {
+  background-color: var(--blue-bright); /* Azul vibrante */
+  color: var(--white);
+  border-radius: 4px;
+}
+
+.columna-beneficios {
+  background-color: var(--blue-bright); /* Consistencia con la marca */
+  color: var(--white);
+}
+
+.boton-servicio {
+  background-color: var(--orange-gas); /* Naranja de acción */
+  color: var(--white);
+  border: none;
+  font-weight: 800;
+  text-transform: uppercase;
 }
