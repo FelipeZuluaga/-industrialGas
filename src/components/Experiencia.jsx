@@ -3,6 +3,11 @@ import './Experiencia.css';
 import tecnicoImg from '../assets/mantenimiento.png'; // Asegúrate de tener esta imagen
 
 const Experiencia = () => {
+  // Datos de contacto (Asegúrate de que coincidan con los de tu Hero)
+  const phone_number = "573001234567"; 
+  const whatsapp_message = "Hola, me gustaría solicitar un servicio técnico a domicilio.";
+  const formatted_whatsapp_url = `https://wa.me/${phone_number}?text=${encodeURIComponent(whatsapp_message)}`;
+
   return (
     <section className="seccion-experiencia">
       <div className="contenedor-flex">
@@ -35,7 +40,16 @@ const Experiencia = () => {
             <li><span className="check">✓</span> Certificados Sena</li>
           </ul>
 
-          <button className="boton-servicio">Solicitar Servicio</button>
+          {/* Cambiamos el <button> por un <a> para permitir la navegación */}
+          <a 
+            href={formatted_whatsapp_url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="boton-servicio"
+            style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+          >
+            Solicitar Servicio
+          </a>
         </div>
 
       </div>

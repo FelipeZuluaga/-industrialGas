@@ -17,11 +17,12 @@ import imgNevera from '../assets/nevera.png';
 
 const Hero = () => {
   
-  // Datos de contacto (Reemplaza con los reales)
+  // Datos de contacto
   const phone_number = "573001234567"; // Número completo con indicativo de país (sin +)
   const whatsapp_message = "Hola, necesito soporte técnico para un gasodoméstico.";
+  
+  // URL de WhatsApp compartida para ambos botones
   const formatted_whatsapp_url = `https://wa.me/${phone_number}?text=${encodeURIComponent(whatsapp_message)}`;
-  const call_url = `tel:+${phone_number}`;
 
   return (
     <section className="hero-container">
@@ -30,7 +31,7 @@ const Hero = () => {
       <Swiper
         modules={[Pagination, Autoplay, EffectFade]}
         spaceBetween={0}
-        slicePerView={1}
+        slidesPerView={1}
         effect={'fade'} // Desvanecimiento suave entre imágenes
         speed={1000} // Velocidad de la transición
         loop={true} // Bucle infinito
@@ -77,7 +78,7 @@ const Hero = () => {
         </p>
         
         <div className="hero-actions">
-          {/* Botón de WhatsApp con enlace real */}
+          {/* Botón 1: Chat WhatsApp */}
           <a 
             href={formatted_whatsapp_url} 
             target="_blank" 
@@ -87,9 +88,14 @@ const Hero = () => {
             <i className="fab fa-whatsapp"></i> Chat WhatsApp
           </a>
 
-          {/* Botón de Llamada con enlace real */}
-          <a href={call_url} className="btn-secondary">
-            <i className="fas fa-phone-alt"></i> Llamar y Agendar
+          {/* Botón 2: Llamar y Agendar (Ahora redirige a WhatsApp) */}
+          <a 
+            href={formatted_whatsapp_url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-secondary"
+          >
+            <i className="fab fa-whatsapp"></i> Llamar y Agendar
           </a>
         </div>
 

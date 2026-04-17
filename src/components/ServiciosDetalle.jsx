@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react'; // Paso 1: Importar useState
 import './ServiciosDetalle.css';
-// Importa tus iconos (puedes usar react-icons o imágenes locales)
-import { FaBriefcase, FaTools, FaHammer } from 'react-icons/fa'; 
+import { FaBriefcase, FaTools, FaHammer, FaTimes } from 'react-icons/fa'; // Añadimos icono de cerrar
+import videoVisitaTecnica from '../assets/visita_tecnica.mp4';
+import videoMantenimiento from '../assets/Mantenimiento.mp4';
+import videoreparacion from '../assets/reparacion.mp4';
 
 const ServiciosDetalle = () => {
+  // Paso 2: Estado para el video actual
+  const [videoActivo, setVideoActivo] = useState(null);
+
+  const phone_number = "573001234567"; 
+
+  const getWhatsAppUrl = (servicio) => {
+    const message = `Hola, me gustaría agendar una visita para el servicio de: ${servicio}`;
+    return `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
+  };
+
+  // Función para abrir el video
+  const abrirVideo = (url) => {
+    setVideoActivo(url);
+  };
+
+  // Función para cerrar el video
+  const cerrarVideo = () => {
+    setVideoActivo(null);
+  };
+
   return (
     <section className="seccion-servicios-completa">
       
-      {/* 1. Franja de Estadísticas (Banner con fondo de circuito) */}
+      {/* Banner de Estadísticas (Sin cambios) */}
       <div className="banner-estadisticas">
         <div className="overlay-oscuro">
           <div className="contenedor-stats">
@@ -31,11 +53,9 @@ const ServiciosDetalle = () => {
         </div>
       </div>
 
-      {/* 2. Cuadrícula de Tarjetas de Precio/Servicio */}
       <div className="contenedor-tarjetas">
-        
         {/* Tarjeta 1: Visita Técnica */}
-        <div className="tarjeta-azul">
+        <div className="tarjeta-azul" onClick={() => abrirVideo(videoVisitaTecnica)}>
           <FaBriefcase className="icono-servicio" />
           <h4>Visita Técnica</h4>
           <ul className="lista-detalles">
@@ -44,11 +64,13 @@ const ServiciosDetalle = () => {
             <li>• Prueba Mecánica</li>
             <li>• Servicio en 40 Minutos</li>
           </ul>
-          <button className="btn-agendar">Agendar Visita</button>
+          <a href={getWhatsAppUrl("Visita Técnica")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+            Agendar Visita
+          </a>
         </div>
 
         {/* Tarjeta 2: Mantenimiento */}
-        <div className="tarjeta-azul">
+        <div className="tarjeta-azul" onClick={() => abrirVideo(videoMantenimiento)}>
           <FaTools className="icono-servicio" />
           <h4>Mantenimiento</h4>
           <ul className="lista-detalles">
@@ -56,13 +78,15 @@ const ServiciosDetalle = () => {
             <li>• Limpieza de Tarjetas</li>
             <li>• Destape de Ductos</li>
             <li>• Desplazamiento de Humedad del Sistema</li>
-            <li>• Limpieza de Polvo, Sistema Electromecánico</li>
+            <li>• Limpieza de Polvo</li>
           </ul>
-          <button className="btn-agendar">Agendar Visita</button>
+          <a href={getWhatsAppUrl("Mantenimiento")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+            Agendar Visita
+          </a>
         </div>
 
         {/* Tarjeta 3: Reparación */}
-        <div className="tarjeta-azul">
+        <div className="tarjeta-azul" onClick={() => abrirVideo(videoreparacion)}>
           <FaHammer className="icono-servicio" />
           <h4>Reparación</h4>
           <ul className="lista-detalles">
@@ -71,10 +95,26 @@ const ServiciosDetalle = () => {
             <li>• Nevecon | Nevera</li>
             <li>• Estufa | Horno</li>
           </ul>
-          <button className="btn-agendar">Agendar Visita</button>
+          <a href={getWhatsAppUrl("Reparación")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+            Agendar Visita
+          </a>
         </div>
-
       </div>
+
+      {/* Modal del Video */}
+      {videoActivo && (
+        <div className="modal-video-overlay" onClick={cerrarVideo}>
+          <div className="modal-video-contenido" onClick={(e) => e.stopPropagation()}>
+            <button className="btn-cerrar-modal" onClick={cerrarVideo}>
+              <FaTimes />
+            </button>
+            <video controls autoPlay className="video-reproductor">
+              <source src={videoActivo} type="video/mp4" />
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
