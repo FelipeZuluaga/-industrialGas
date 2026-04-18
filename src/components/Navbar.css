@@ -71,3 +71,60 @@
   transform: scale(1.05);
   background-color: #e04e1a;
 }
+/* --- Estilos para Móvil (Hamburguesa) --- */
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh; /* Ocupa el resto de la pantalla */
+    top: 80px;    /* La altura de tu navbar */
+    background-color: var(--logo-bg-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%); /* Lo escondemos a la derecha */
+    transition: transform 0.5s ease-in;
+    gap: 40px;
+    padding-top: 50px;
+  }
+
+  /* Clase que activa el menú (se activa en el JSX) */
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  /* Estilizamos las 3 rayitas */
+  .nav-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--blue-dark);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animación de la hamburguesa a "X" cuando está abierto */
+  .nav-hamburger.open span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-hamburger.open span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Ocultar hamburguesa en escritorio */
+@media screen and (min-width: 769px) {
+  .nav-hamburger {
+    display: none;
+  }
+}

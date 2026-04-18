@@ -7,15 +7,27 @@
   --gray-bg: #d1d5db;        /* Gris para secciones secundarias */
 }
 
+* {
+  box-sizing: border-box; /* Fundamental para que el padding no sume al ancho */
+}
 body {
   background-color: var(--blue-dark);
   color: var(--white);
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden; /* Evita fugas visuales laterales */
 }
+
 .seccion-experiencia {
   background-color: var(--blue-dark);
-  padding: 80px 20px;
+  padding: 40px 15px; /* Menos padding en móviles */
+}
+
+/* En pantallas grandes, volvemos a los 80px */
+@media (min-width: 768px) {
+  .seccion-experiencia {
+    padding: 80px 20px;
+  }
 }
 
 .cuadro-info {
