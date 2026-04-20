@@ -4,7 +4,7 @@ import tecnicoImg from '../assets/mantenimiento.png'; // Asegúrate de tener est
 
 const Experiencia = () => {
   // Datos de contacto (Asegúrate de que coincidan con los de tu Hero)
-  const phone_number = "573001234567"; 
+  const phone_number = "573107727491"; 
   const whatsapp_message = "Hola, me gustaría solicitar un servicio técnico a domicilio.";
   const formatted_whatsapp_url = `https://wa.me/${phone_number}?text=${encodeURIComponent(whatsapp_message)}`;
 

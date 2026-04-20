@@ -9,7 +9,7 @@ const ServiciosDetalle = () => {
   // Paso 2: Estado para el video actual
   const [videoActivo, setVideoActivo] = useState(null);
 
-  const phone_number = "573001234567"; 
+  const phone_number = "573107727491"; 
 
   const getWhatsAppUrl = (servicio) => {
     const message = `Hola, me gustaría agendar una visita para el servicio de: ${servicio}`;

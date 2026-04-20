@@ -21,12 +21,8 @@ const Contact = () => {
           
           <div className="contact-methods">
             <div className="method-item">
-              <div className="icon-box"><Phone size={20} /></div>
-              <span>PBX (Bogotá): <strong>601 9395380</strong></span>
-            </div>
-            <div className="method-item">
               <div className="icon-box"><Smartphone size={20} /></div>
-              <span>Móvil: <strong>300 850 1205</strong></span>
+              <span>Móvil: <strong>310 7727 491</strong></span>
             </div>
           </div>
         </div>
@@ -48,12 +44,12 @@ const Contact = () => {
       <div className="footer-bottom">
         <p>
           Respetamos y protegemos tu privacidad... Somos un servicio técnico independiente. 
-          No estamos afiliados ni autorizados por Challenger.
+          Si estamos afiliados ni autorizados por Challenger.
         </p>
       </div>
 
       {/* Botón Flotante de WhatsApp (El de la esquina inferior) */}
-      <a href="https://wa.me/573008501205" className="whatsapp-float" target="_blank" rel="noreferrer">
+      <a href="https://wa.me/573107727491" className="whatsapp-float" target="_blank" rel="noreferrer">
         <div className="whatsapp-content">
           {/* Actualizamos también el icono aquí para que sea el oficial */}
           <IoLogoWhatsapp size={22} color="white" />

@@ -18,7 +18,7 @@ import imgNevera from '../assets/nevera.png';
 const Hero = () => {
   
   // Datos de contacto
-  const phone_number = "573001234567"; // Número completo con indicativo de país (sin +)
+  const phone_number = "573107727491"; // Número completo con indicativo de país (sin +)
   const whatsapp_message = "Hola, necesito soporte técnico para un gasodoméstico.";
   
   // URL de WhatsApp compartida para ambos botones
