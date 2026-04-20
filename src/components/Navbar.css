@@ -75,61 +75,56 @@
 
 @media screen and (max-width: 768px) {
   .nav-links {
-    position: fixed; /* Cambiado a fixed para que cubra toda la pantalla real */
-    right: 0;
-    height: 100vh;
-    top: 0;
-    background-color: var(--blue-dark);
+    position: absolute;
+    right: 0px;
+    height: 92vh; /* Ocupa el resto de la pantalla */
+    top: 80px;    /* La altura de tu navbar */
+    background-color: var(--logo-bg-light);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
-    transform: translateX(100%);
-    transition: transform 0.4s ease-in-out;
-    gap: 30px;
-    z-index: 1000; /* Debajo del botón hamburguesa */
+    transform: translateX(100%); /* Lo escondemos a la derecha */
+    transition: transform 0.5s ease-in;
+    gap: 40px;
+    padding-top: 50px;
   }
 
+  /* Clase que activa el menú (se activa en el JSX) */
   .nav-active {
     transform: translateX(0%);
   }
 
+  /* Estilizamos las 3 rayitas */
   .nav-hamburger {
     display: block;
     cursor: pointer;
-    z-index: 2000; /* Mucho más alto para que siempre esté arriba */
-    position: relative;
   }
 
-  /* --- CAMBIO DE COLOR DINÁMICO --- */
-  /* Cuando el menú está CERRADO, las rayitas son azules oscuras */
   .nav-hamburger span {
-    background-color: var(--blue-dark);
     display: block;
-    width: 28px;
+    width: 25px;
     height: 3px;
+    background-color: var(--blue-dark);
     margin: 5px;
     transition: all 0.3s ease;
   }
 
-  /* Cuando el menú está ABIERTO (clase .open), las rayitas cambian a BLANCO */
-  .nav-hamburger.open span {
-    background-color: var(--white) !important;
-  }
-
-  /* Animación de la X */
+  /* Animación de la hamburguesa a "X" cuando está abierto */
   .nav-hamburger.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
   }
   .nav-hamburger.open span:nth-child(2) {
     opacity: 0;
   }
   .nav-hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -6px);
+    transform: rotate(45deg) translate(-5px, -6px);
   }
+}
 
-  .nav-logo-container {
-    z-index: 500; /* El logo se queda al fondo cuando el menú abre */
+/* Ocultar hamburguesa en escritorio */
+@media screen and (min-width: 769px) {
+  .nav-hamburger {
+    display: none;
   }
 }
