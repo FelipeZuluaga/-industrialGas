@@ -149,33 +149,24 @@
 /* --------------------------------- */
 
 
-/* AJUSTES PARA MÓVILES */
-@media (max-width: 768px) {
-    .hero-container {
-        height: auto;
-        min-height: 100vh; /* Ocupa toda la pantalla en móvil */
-        padding: 60px 0;
-    }
-    
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-description {
-        font-size: 1.1rem;
-    }
+/* Hero.css */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.6rem; /* Tamaño más cómodo */
+  }
+  
+  .hero-title br {
+    display: none; /* Quitamos el salto de línea para que el texto fluya */
+  }
 
-    .hero-actions {
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        justify-content: center;
-    }
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%; /* Botones grandes y fáciles de presionar */
+    text-align: center;
+  }
 }

@@ -4,16 +4,19 @@
 
 /* Estilos del Banner de Estadísticas */
 .banner-estadisticas {
-  background-image: url('../assets/reparacion.png'); /* Reemplaza con tu imagen de circuito */
+  background-image: url('../assets/reparacion.png');
+  /* Reemplaza con tu imagen de circuito */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Efecto Parallax opcional */
+  background-attachment: fixed;
+  /* Efecto Parallax opcional */
   height: 200px;
   position: relative;
 }
 
 .overlay-oscuro {
-  background-color: rgba(0, 0, 0, 0.6); /* Capa oscura para que el texto resalte */
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Capa oscura para que el texto resalte */
   width: 100%;
   height: 100%;
   display: flex;
@@ -45,7 +48,8 @@
 /* Estilos de las Tarjetas Inferiores */
 .contenedor-tarjetas {
   max-width: 1200px;
-  margin: -40px auto 60px; /* Sube las tarjetas para que pisen un poco el banner si lo deseas */
+  margin: -40px auto 60px;
+  /* Sube las tarjetas para que pisen un poco el banner si lo deseas */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -55,7 +59,8 @@
 }
 
 .tarjeta-azul {
-  background-color: #1e90ff; /* Azul brillante */
+  background-color: #1e90ff;
+  /* Azul brillante */
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -63,7 +68,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .icono-servicio {
@@ -84,7 +89,8 @@
   margin-bottom: 30px;
   text-align: left;
   width: 100%;
-  min-height: 150px; /* Mantiene las tarjetas alineadas */
+  min-height: 150px;
+  /* Mantiene las tarjetas alineadas */
 }
 
 .lista-detalles li {
@@ -94,7 +100,8 @@
 }
 
 .btn-agendar {
-  background-color: #555; /* Color gris oscuro de la imagen */
+  background-color: #555;
+  /* Color gris oscuro de la imagen */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -111,44 +118,31 @@
   background-color: #333;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
+/* ServiciosDetalle.css */
+@media (max-width: 768px) {
   .contenedor-tarjetas {
     grid-template-columns: 1fr;
-    margin-top: 20px;
+    /* Una tarjeta por fila */
+    padding: 0 10px;
   }
-  
-  .contenedor-stats {
-    flex-wrap: wrap;
-    gap: 20px;
+
+  .tarjeta-azul {
+    min-height: auto;
+    padding: 30px 20px;
   }
 
   .banner-estadisticas {
     height: auto;
     padding: 40px 0;
   }
-}
-/* ServiciosDetalle.css */
-.tarjeta-azul {
-  background-color: var(--blue-bright);
-  border: 1px solid var(--shadow-blue);
-}
 
-.tarjeta-azul h4 {
-  color: var(--blue-dark); /* Texto oscuro sobre fondo claro */
-}
+  .contenedor-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-.stat-item .numero {
-  color: var(--orange-gas); /* Los números en naranja resaltan mucho */
-}
-
-.stat-item .etiqueta {
-  color: var(--gold-text); /* Dorado para las etiquetas de estadísticas */
-  font-weight: bold;
-}
-
-.btn-agendar {
-  background-color: var(--blue-dark); /* Botón oscuro */
-  color: var(--white);
-  border: 1px solid var(--gold-text); /* Borde dorado elegante */
+  /* El modal del video debe ocupar casi toda la pantalla */
+  .modal-video-contenido {
+    width: 95%;
+  }
 }

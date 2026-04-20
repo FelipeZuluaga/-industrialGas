@@ -77,9 +77,9 @@
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh; /* Ocupa el resto de la pantalla */
-    top: 80px;    /* La altura de tu navbar */
-    background-color: var(--logo-bg-light);
+    height: 100vh; /* Cambia a 100vh para que cubra todo */
+    top: 0;        /* Que empiece desde arriba */
+    background-color: var(--blue-dark); /* Color sólido para que no se trasluzca el fondo */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +88,7 @@
     transition: transform 0.5s ease-in;
     gap: 40px;
     padding-top: 50px;
+    justify-content: center;
   }
 
   /* Clase que activa el menú (se activa en el JSX) */
@@ -99,6 +100,7 @@
   .nav-hamburger {
     display: block;
     cursor: pointer;
+    z-index: 1001; /* Asegura que el botón de cierre esté por encima del menú */
   }
 
   .nav-hamburger span {
