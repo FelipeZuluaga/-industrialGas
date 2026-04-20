@@ -14,8 +14,13 @@ const Navbar = () => {
         <img src={logo} alt="IndustrialGas Logo" className="nav-logo" />
       </div>
 
-      <div className={`nav-hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span></span><span></span><span></span>
+      <div
+        className={`nav-hamburger ${isOpen ? 'open' : ''}`}
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <div className={`nav-links ${isOpen ? 'nav-active' : ''}`}>
