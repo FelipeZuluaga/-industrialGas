@@ -17,7 +17,7 @@
 }
 
 .gold-title {
-  color: var(--gold-text); /* Dorado para el título */
+  color: #f15a24; /* Cambiado de var(--gold-text) a naranja */
   font-size: 1.8rem;
   text-transform: uppercase;
 }
@@ -29,7 +29,7 @@
 }
 
 .icon-box {
-  background-color: var(--blue-bright); /* Iconos en azul vibrante */
+  background-color:  #f15a24; 
   color: var(--white);
   padding: 10px;
   border-radius: 6px;
@@ -44,7 +44,7 @@
 }
 
 .blue-text {
-  color: var(--blue-bright); /* "TU VISITA TÉCNICA" resalta en azul claro */
+  color: white;
 }
 
 .availability {

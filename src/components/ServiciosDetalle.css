@@ -59,7 +59,7 @@
 }
 
 .tarjeta-azul {
-  background-color: #1e90ff;
+  background-color: #08346a;
   /* Azul brillante */
   color: white;
   padding: 40px 20px;
@@ -100,8 +100,7 @@
 }
 
 .btn-agendar {
-  background-color: #555;
-  /* Color gris oscuro de la imagen */
+  background-color: #f15a24;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -112,10 +111,16 @@
   font-weight: bold;
   transition: background 0.3s;
   margin-top: auto;
+  
+  /* ESTA ES LA LÍNEA QUE DEBES AGREGAR */
+  text-decoration: none; 
+  
+  /* Opcional: Asegura que se comporte como un bloque para el padding */
+  display: inline-block; 
 }
 
 .btn-agendar:hover {
-  background-color: #333;
+  background-color: #ee4d12;
 }
 
 /* ServiciosDetalle.css */
@@ -145,4 +150,31 @@
   .modal-video-contenido {
     width: 95%;
   }
+}
+.btn-conoce-mas {
+  background: transparent;
+  color: #f15a24; /* El naranja que querías */
+  border: 1px solid #f15a24;
+  padding: 8px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px; /* Espacio antes del botón de agendar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-conoce-mas:hover {
+  background: #f15a24;
+  color: white;
+}
+
+/* Estilo para que el icono del play se vea bien */
+.btn-conoce-mas svg {
+  font-size: 1rem;
 }

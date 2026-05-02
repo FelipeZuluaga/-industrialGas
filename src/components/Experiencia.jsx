@@ -1,6 +1,6 @@
 import React from 'react';
 import './Experiencia.css';
-import tecnicoImg from '../assets/mantenimiento.png'; // Asegúrate de tener esta imagen
+import tecnicoImg from '../assets/calentador.png'; // Asegúrate de tener esta imagen
 
 const Experiencia = () => {
   // Datos de contacto (Asegúrate de que coincidan con los de tu Hero)

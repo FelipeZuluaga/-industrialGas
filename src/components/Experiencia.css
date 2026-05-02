@@ -32,7 +32,7 @@
 /* Cuadros azules superpuestos */
 .cuadro-info {
   position: absolute;
-  background-color: #1e90ff; /* Azul brillante como la imagen */
+  background-color: #08346a;
   color: white;
   padding: 25px;
   width: 250px;
@@ -64,7 +64,7 @@
 /* Lado de los Beneficios */
 .columna-beneficios {
   flex: 1;
-  background-color: #1e90ff;
+  background-color: #08346a;
   color: white;
   padding: 50px;
   border-radius: 4px;
@@ -97,7 +97,7 @@
 }
 
 .boton-servicio {
-  background-color: #6c757d; /* Gris del botón */
+  background-color: #f15a24; 
   color: white;
   border: none;
   padding: 12px 25px;
@@ -108,7 +108,7 @@
 }
 
 .boton-servicio:hover {
-  background-color: #5a6268;
+  background-color: #ed4a0e;
 }
 
 /* Responsive */
@@ -158,7 +158,7 @@
 
 .tarjeta-azul:hover {
   transform: translateY(-10px);
-  background-color: #007bff; /* Un azul un poco más oscuro al hacer hover */
+  background-color: #001b3d; /* Un azul un poco más oscuro al hacer hover */
 }
 
 /* Estilos del Modal */

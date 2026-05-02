@@ -43,8 +43,8 @@ const Contact = () => {
       {/* Barra Inferior de Legales (Sin cambios) */}
       <div className="footer-bottom">
         <p>
-          Respetamos y protegemos tu privacidad... Somos un servicio técnico independiente. 
-          Si estamos afiliados ni autorizados por Challenger.
+          Respetamos y protegemos tu privacidad... Somos un servicio técnico autorizado 
+          por , Haceb,Challenger,Abba,Continental,Superior,YamaGas,Mabe,Whirlpool,Bosch
         </p>
       </div>
 

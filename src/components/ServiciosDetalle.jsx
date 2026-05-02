@@ -1,14 +1,17 @@
-import React, { useState } from 'react'; // Paso 1: Importar useState
+import React, { useState } from 'react'; 
 import './ServiciosDetalle.css';
-import { FaBriefcase, FaTools, FaHammer, FaTimes } from 'react-icons/fa'; // Añadimos icono de cerrar
+import { FaBriefcase, FaTools, FaHammer, FaTimes, FaPlayCircle } from 'react-icons/fa'; // Añadimos FaPlayCircle para un icono visual
+
+
 import videoVisitaTecnica from '../assets/visita_tecnica.mp4';
-import videoMantenimiento from '../assets/Mantenimiento.mp4';
+import videoMantenimiento from '../assets/manteni.mp4';
 import videoreparacion from '../assets/reparacion.mp4';
 
-const ServiciosDetalle = () => {
-  // Paso 2: Estado para el video actual
-  const [videoActivo, setVideoActivo] = useState(null);
 
+
+
+const ServiciosDetalle = () => {
+  const [videoActivo, setVideoActivo] = useState(null);
   const phone_number = "573107727491"; 
 
   const getWhatsAppUrl = (servicio) => {
@@ -16,20 +19,17 @@ const ServiciosDetalle = () => {
     return `https://wa.me/${phone_number}?text=${encodeURIComponent(message)}`;
   };
 
-  // Función para abrir el video
   const abrirVideo = (url) => {
     setVideoActivo(url);
   };
 
-  // Función para cerrar el video
   const cerrarVideo = () => {
     setVideoActivo(null);
   };
 
   return (
     <section className="seccion-servicios-completa">
-      
-      {/* Banner de Estadísticas (Sin cambios) */}
+      {/* Banner de Estadísticas */}
       <div className="banner-estadisticas">
         <div className="overlay-oscuro">
           <div className="contenedor-stats">
@@ -55,7 +55,7 @@ const ServiciosDetalle = () => {
 
       <div className="contenedor-tarjetas">
         {/* Tarjeta 1: Visita Técnica */}
-        <div className="tarjeta-azul" onClick={() => abrirVideo(videoVisitaTecnica)}>
+        <div className="tarjeta-azul"> {/* Quitamos el onClick de aquí */}
           <FaBriefcase className="icono-servicio" />
           <h4>Visita Técnica</h4>
           <ul className="lista-detalles">
@@ -64,13 +64,19 @@ const ServiciosDetalle = () => {
             <li>• Prueba Mecánica</li>
             <li>• Servicio en 40 Minutos</li>
           </ul>
-          <a href={getWhatsAppUrl("Visita Técnica")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+          
+          {/* Nuevo Botón Conoce Más */}
+          <button className="btn-conoce-mas" onClick={() => abrirVideo(videoVisitaTecnica)}>
+             <FaPlayCircle /> Conoce más
+          </button>
+
+          <a href={getWhatsAppUrl("Visita Técnica")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
             Agendar Visita
           </a>
         </div>
 
         {/* Tarjeta 2: Mantenimiento */}
-        <div className="tarjeta-azul" onClick={() => abrirVideo(videoMantenimiento)}>
+        <div className="tarjeta-azul">
           <FaTools className="icono-servicio" />
           <h4>Mantenimiento</h4>
           <ul className="lista-detalles">
@@ -80,13 +86,18 @@ const ServiciosDetalle = () => {
             <li>• Desplazamiento de Humedad del Sistema</li>
             <li>• Limpieza de Polvo</li>
           </ul>
-          <a href={getWhatsAppUrl("Mantenimiento")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+
+          <button className="btn-conoce-mas" onClick={() => abrirVideo(videoMantenimiento)}>
+             <FaPlayCircle /> Conoce más
+          </button>
+
+          <a href={getWhatsAppUrl("Mantenimiento")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
             Agendar Visita
           </a>
         </div>
 
         {/* Tarjeta 3: Reparación */}
-        <div className="tarjeta-azul" onClick={() => abrirVideo(videoreparacion)}>
+        <div className="tarjeta-azul">
           <FaHammer className="icono-servicio" />
           <h4>Reparación</h4>
           <ul className="lista-detalles">
@@ -95,7 +106,12 @@ const ServiciosDetalle = () => {
             <li>• Nevecon | Nevera</li>
             <li>• Estufa | Horno</li>
           </ul>
-          <a href={getWhatsAppUrl("Reparación")} target="_blank" rel="noopener noreferrer" className="btn-agendar" onClick={(e) => e.stopPropagation()}>
+
+          <button className="btn-conoce-mas" onClick={() => abrirVideo(videoreparacion)}>
+             <FaPlayCircle /> Conoce más
+          </button>
+
+          <a href={getWhatsAppUrl("Reparación")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
             Agendar Visita
           </a>
         </div>

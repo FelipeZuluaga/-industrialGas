@@ -13,7 +13,7 @@ import './Hero.css';
 
 // Importamos tus imágenes de assets
 import imgEstufa from '../assets/estufa.png';
-import imgNevera from '../assets/nevera.png';
+import imgNevera from '../assets/calentador.png';
 
 const Hero = () => {
   
@@ -73,7 +73,7 @@ const Hero = () => {
         </h1>
         
         <p className="hero-description">
-          Técnicos expertos en Estufas, Calentadores, Hornos, Chimeneas, Lavadoras y Neveras.<br />
+          Técnicos expertos en Calentadores,Estufas,Hornos, Chimeneas, Lavadoras y Neveras.<br />
           <strong>Atención inmediata y garantía por escrito.</strong>
         </p>
         
