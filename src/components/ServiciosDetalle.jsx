@@ -34,8 +34,8 @@ const ServiciosDetalle = () => {
         <div className="overlay-oscuro">
           <div className="contenedor-stats">
             <div className="stat-item">
-              <span className="numero">157+</span>
-              <span className="etiqueta">Profesionales</span>
+              <span className="numero">+25</span>
+              <span className="etiqueta">Profesionales a tu servicio</span>
             </div>
             <div className="stat-item">
               <span className="numero">982+</span>
@@ -67,7 +67,7 @@ const ServiciosDetalle = () => {
           
           {/* Nuevo Botón Conoce Más */}
           <button className="btn-conoce-mas" onClick={() => abrirVideo(videoVisitaTecnica)}>
-             <FaPlayCircle /> Conoce más
+             <FaPlayCircle /> Conoce nuestros servicios
           </button>
 
           <a href={getWhatsAppUrl("Visita Técnica")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
@@ -80,7 +80,6 @@ const ServiciosDetalle = () => {
           <FaTools className="icono-servicio" />
           <h4>Mantenimiento</h4>
           <ul className="lista-detalles">
-            <li>• Cotizar</li>
             <li>• Limpieza de Tarjetas</li>
             <li>• Destape de Ductos</li>
             <li>• Desplazamiento de Humedad del Sistema</li>
@@ -88,7 +87,7 @@ const ServiciosDetalle = () => {
           </ul>
 
           <button className="btn-conoce-mas" onClick={() => abrirVideo(videoMantenimiento)}>
-             <FaPlayCircle /> Conoce más
+             <FaPlayCircle /> Conoce nuestros servicios
           </button>
 
           <a href={getWhatsAppUrl("Mantenimiento")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
@@ -101,14 +100,14 @@ const ServiciosDetalle = () => {
           <FaHammer className="icono-servicio" />
           <h4>Reparación</h4>
           <ul className="lista-detalles">
-            <li>• Cotizar | Calentador</li>
-            <li>• Lavadora | Secadora</li>
-            <li>• Nevecon | Nevera</li>
-            <li>• Estufa | Horno</li>
+            <li>• Calentador</li>
+            <li>• Estufa</li>
+            <li>• Horno</li>
+            <li>• Chimenea</li>
           </ul>
 
           <button className="btn-conoce-mas" onClick={() => abrirVideo(videoreparacion)}>
-             <FaPlayCircle /> Conoce más
+             <FaPlayCircle /> Conoce nuestros servicios
           </button>
 
           <a href={getWhatsAppUrl("Reparación")} target="_blank" rel="noopener noreferrer" className="btn-agendar">

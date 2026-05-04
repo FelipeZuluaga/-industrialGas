@@ -22,7 +22,8 @@ const Contact = () => {
           <div className="contact-methods">
             <div className="method-item">
               <div className="icon-box"><Smartphone size={20} /></div>
-              <span>Móvil: <strong>310 7727 491</strong></span>
+              <span>Atención al cliente: <strong>310 7727 491</strong></span>
+              <span>Movil: <strong>324 9582 456</strong></span>
             </div>
           </div>
         </div>

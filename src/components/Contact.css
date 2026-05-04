@@ -126,3 +126,13 @@
     margin-top: 25px;
   }
 }
+.method-item {
+  display: flex;
+  flex-direction: column; /* Alinea los hijos verticalmente */
+  gap: 5px;               /* Añade un espacio pequeño entre los textos */
+}
+
+/* Si quieres que el icono y el texto sigan teniendo armonía */
+.icon-box {
+  margin-bottom: 8px;    /* Espacio debajo del icono */
+}
