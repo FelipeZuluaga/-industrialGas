@@ -3,9 +3,9 @@ import './ServiciosDetalle.css';
 import { FaBriefcase, FaTools, FaHammer, FaTimes, FaPlayCircle } from 'react-icons/fa'; // Añadimos FaPlayCircle para un icono visual
 
 
-import videoVisitaTecnica from '../assets/visita_tecnica.mp4';
+import videoVisitaTecnica from '../assets/visita_tecnica_instal.mp4';
 import videoMantenimiento from '../assets/manteni.mp4';
-import videoreparacion from '../assets/reparacion.mp4';
+import videoreparacion from '../assets/Reparacion_1.mp4';
 
 
 
@@ -57,7 +57,7 @@ const ServiciosDetalle = () => {
         {/* Tarjeta 1: Visita Técnica */}
         <div className="tarjeta-azul"> {/* Quitamos el onClick de aquí */}
           <FaBriefcase className="icono-servicio" />
-          <h4>Visita Técnica</h4>
+          <h4>Visita Técnica e Instalación</h4>
           <ul className="lista-detalles">
             <li>• Revisión General</li>
             <li>• Prueba Eléctrica</li>
