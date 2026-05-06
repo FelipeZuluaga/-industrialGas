@@ -1,18 +1,23 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import './ServiciosDetalle.css';
 import { FaBriefcase, FaTools, FaHammer, FaTimes, FaPlayCircle } from 'react-icons/fa'; // Añadimos FaPlayCircle para un icono visual
 
 
-import videoVisitaTecnica from '../assets/visita_tecnica_instal.mp4';
+import videoVisitaTecnica from '../assets/visita_tecnica.mp4';
+import videoInstalacion from '../assets/Instalacion.mp4';
+
 import videoMantenimiento from '../assets/manteni.mp4';
+
+
 import videoreparacion from '../assets/Reparacion_1.mp4';
+import videoEstufas from '../assets/Reparacion_1.mp4';
 
 
 
 
 const ServiciosDetalle = () => {
   const [videoActivo, setVideoActivo] = useState(null);
-  const phone_number = "573107727491"; 
+  const phone_number = "573107727491";
 
   const getWhatsAppUrl = (servicio) => {
     const message = `Hola, me gustaría agendar una visita para el servicio de: ${servicio}`;
@@ -64,12 +69,27 @@ const ServiciosDetalle = () => {
             <li>• Prueba Mecánica</li>
             <li>• Servicio en 40 Minutos</li>
           </ul>
-          
-          {/* Nuevo Botón Conoce Más */}
-          <button className="btn-conoce-mas" onClick={() => abrirVideo(videoVisitaTecnica)}>
-             <FaPlayCircle /> Conoce nuestros servicios
-          </button>
 
+          {/* Nuevo Botón Conoce Más */}
+
+          <div className="contenedor-video-select" style={{ position: 'relative' }}>
+            <select
+              className="btn-conoce-mas"
+              style={{ appearance: 'none', textAlign: 'center', width: '100%', cursor: 'pointer' }}
+              onChange={(e) => {
+                if (e.target.value) abrirVideo(e.target.value);
+                // Opcional: resetear el select después de elegir
+                e.target.value = "";
+              }}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                ▶ Conoce nuestros servicios
+              </option>
+              <option value={videoVisitaTecnica}>Video: Visita Técnica</option>
+              <option value={videoInstalacion}>Video: Instalación</option>
+            </select>
+          </div>
           <a href={getWhatsAppUrl("Visita Técnica")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
             Agendar Visita
           </a>
@@ -87,7 +107,7 @@ const ServiciosDetalle = () => {
           </ul>
 
           <button className="btn-conoce-mas" onClick={() => abrirVideo(videoMantenimiento)}>
-             <FaPlayCircle /> Conoce nuestros servicios
+            <FaPlayCircle /> Conoce nuestros servicios
           </button>
 
           <a href={getWhatsAppUrl("Mantenimiento")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
@@ -106,9 +126,25 @@ const ServiciosDetalle = () => {
             <li>• Chimenea</li>
           </ul>
 
-          <button className="btn-conoce-mas" onClick={() => abrirVideo(videoreparacion)}>
-             <FaPlayCircle /> Conoce nuestros servicios
-          </button>
+          {/* Dropdown de Selección de Video */}
+          <div className="contenedor-video-select" style={{ position: 'relative' }}>
+            <select
+              className="btn-conoce-mas"
+              style={{ appearance: 'none', textAlign: 'center', width: '100%', cursor: 'pointer' }}
+              onChange={(e) => {
+                if (e.target.value) abrirVideo(e.target.value);
+                // Opcional: resetear el select después de elegir
+                e.target.value = "";
+              }}
+              defaultValue=""
+            >
+              <option value="" disabled>
+                ▶ Conoce nuestros servicios
+              </option>
+              <option value={videoreparacion}>Video: Reparación de Calentadores</option>
+              <option value={videoEstufas}>Video: Reparación de Estufas</option>
+            </select>
+          </div>
 
           <a href={getWhatsAppUrl("Reparación")} target="_blank" rel="noopener noreferrer" className="btn-agendar">
             Agendar Visita
