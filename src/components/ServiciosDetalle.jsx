@@ -9,8 +9,8 @@ import videoInstalacion from '../assets/Instalacion.mp4';
 import videoMantenimiento from '../assets/manteni.mp4';
 
 
-import videoreparacion from '../assets/videoEstufas.mp4';
-import videoEstufas from '../assets/Reparacion_1.mp4';
+import videoreparacion from '../assets/Reparacion_1.mp4';
+import videoEstufas from '../assets/videoEstufas.mp4';
 
 
 
